@@ -1,0 +1,36 @@
+@import "variables";
+@import "mixins";
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+
+    color: $text-light;
+}
+
+main {
+    flex-grow: 1;
+    padding: 80px 0 0;
+
+    @include vp-1023 {
+        padding: 58px 0 0;
+    }
+}
+
+img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+a {
+    color: $color-black;
+    text-decoration: none;
+}
