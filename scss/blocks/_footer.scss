@@ -8,13 +8,13 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 24px;
+        margin: 0 0 24px 0;
 
         @include vp-767 {
             flex-direction: column;
             align-items: center;
             gap: 20px;
-            margin-bottom: 24px;
+            margin: 0 0 24px 0;
         }
     }
 
