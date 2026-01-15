@@ -826,4 +826,54 @@ h2 {
     -webkit-transform: translateX(-1224px);
             transform: translateX(-1224px);
   }
+}
+.table-section {
+  padding: 90px 0;
+}
+@media (max-width: 767px) {
+  .table-section {
+    padding: 50px 0;
+  }
+}
+
+.table {
+  overflow-x: auto;
+  border-radius: 20px;
+  border: 1px solid #1e293b;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}
+.table::-webkit-scrollbar {
+  height: 4px;
+}
+.table::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+.table::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+.table__wrapper {
+  width: 100%;
+}
+.table__grid {
+  width: 100%;
+  min-width: 400px;
+  border-collapse: collapse;
+  text-align: left;
+}
+.table__header, .table__cell {
+  padding: 14px;
+  border-bottom: 1px solid #1e293b;
+  white-space: nowrap;
+}
+.table__header:not(:first-child), .table__cell:not(:first-child) {
+  border-left: 1px solid #1e293b;
+}
+.table__header {
+  background: #070b18;
+  font-weight: 800;
 }/*# sourceMappingURL=style.css.map */

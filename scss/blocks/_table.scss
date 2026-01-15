@@ -1,0 +1,49 @@
+.table {
+    overflow-x: auto;
+    border-radius: 20px;
+    border: 1px solid $color-midnight;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+
+    &::-webkit-scrollbar {
+        height: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 4px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $color-midnight;
+        border-radius: 4px;
+        transition: background 0.2s;
+    }
+
+    &__wrapper {
+        width: 100%;
+    }
+
+    &__grid {
+        width: 100%;
+        min-width: 400px;
+        border-collapse: collapse;
+        text-align: left;
+    }
+
+    &__header,
+    &__cell {
+        padding: 14px;
+        border-bottom: 1px solid $color-midnight;
+        white-space: nowrap;
+
+        &:not(:first-child) {
+            border-left: 1px solid $color-midnight;
+        }
+    }
+
+    &__header {
+        background: $color-black-russian;
+        font-weight: 800;
+    }
+}
