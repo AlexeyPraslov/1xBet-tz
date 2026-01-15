@@ -720,4 +720,110 @@ h2 {
   background: #22c55e;
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
+}
+
+.facts {
+  padding: 0 0 90px 0;
+  overflow: hidden;
+}
+@media (max-width: 767px) {
+  .facts {
+    padding: 50px 0;
+  }
+}
+.facts__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 24px;
+}
+@media (min-width: 767px) {
+  .facts__wrapper {
+    display: none;
+  }
+}
+.facts__item {
+  background: linear-gradient(135deg, #070b18, #0a1a2f);
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 26px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.facts__item:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+.facts__title {
+  font-weight: 700;
+  color: #ffffff;
+}
+.facts__value {
+  font-size: 14px;
+  color: #94a3b8;
+}
+.facts__carousel-container {
+  display: none;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 8px 0;
+}
+@media (min-width: 767px) {
+  .facts__carousel-container {
+    display: block;
+  }
+  .facts__carousel-container:hover .facts__carousel-track {
+    -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+  }
+}
+@media (max-width: 767px) {
+  .facts__carousel-container {
+    display: none;
+  }
+}
+.facts__carousel-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 24px;
+  -webkit-animation: scrollFacts 30s linear infinite;
+          animation: scrollFacts 30s linear infinite;
+}
+.facts__carousel-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 180px;
+          flex: 0 0 180px;
+  background: linear-gradient(135deg, #070b18, #0a1a2f);
+  border: 1px solid #1e293b;
+  border-radius: 20px;
+  padding: 26px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.facts__carousel-item:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+
+@-webkit-keyframes scrollFacts {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1224px);
+            transform: translateX(-1224px);
+  }
+}
+
+@keyframes scrollFacts {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1224px);
+            transform: translateX(-1224px);
+  }
 }/*# sourceMappingURL=style.css.map */
