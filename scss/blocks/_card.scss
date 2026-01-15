@@ -1,0 +1,25 @@
+.card {
+    background: linear-gradient(
+        135deg,
+        $color-black-russian,
+        $color-black-pearl
+    );
+    border: 1px solid $color-midnight;
+    border-radius: 22px;
+    padding: 28px;
+    transition: 0.3s;
+
+    &:hover {
+        transform: translateY(-6px);
+    }
+
+    &__title {
+        font-weight: 800;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        font-size: 14px;
+        color: $color-rock-blue;
+    }
+}

@@ -876,4 +876,39 @@ h2 {
 .table__header {
   background: #070b18;
   font-weight: 800;
+}
+
+.steps {
+  padding: 90px 0;
+}
+@media (max-width: 767px) {
+  .steps {
+    padding: 50px 0;
+  }
+}
+.steps__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: linear-gradient(135deg, #070b18, #0a1a2f);
+  border: 1px solid #1e293b;
+  border-radius: 22px;
+  padding: 28px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.card:hover {
+  -webkit-transform: translateY(-6px);
+          transform: translateY(-6px);
+}
+.card__title {
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+.card__text {
+  font-size: 14px;
+  color: #94a3b8;
 }/*# sourceMappingURL=style.css.map */
