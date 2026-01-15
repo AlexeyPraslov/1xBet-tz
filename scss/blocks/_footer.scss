@@ -53,13 +53,13 @@
         transition: background 0.2s;
 
         svg {
-            width: 20px;
-            height: 20px;
+            width: 32px;
+            height: 32px;
             fill: $color-slate;
 
             @include vp-767 {
-                width: 16px;
-                height: 16px;
+                width: 22px;
+                height: 22px;
             }
         }
 
