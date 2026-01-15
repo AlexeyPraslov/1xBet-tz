@@ -38,7 +38,7 @@
 
 1. Склонируй репозиторий:
     ```bash
-    git clone https://github.com/vasya/1xbet-landing.git
+    git clone https://github.com/AlexeyPraslov/1xBet-tz
     ```
 
 ## 🛠 Разработка
