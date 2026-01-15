@@ -1,0 +1,147 @@
+.hero {
+    padding: 90px 0;
+    background: radial-gradient(
+            60% 60% at 70% 0%,
+            $color-malachite-18,
+            transparent
+        ),
+        radial-gradient(40% 40% at 20% 20%, $color-royal-blue-18, transparent);
+}
+
+.hero__grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: stretch;
+}
+
+.hero__title {
+    font-size: clamp(38px, 6vw, 62px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero__text {
+    max-width: 520px;
+    color: $color-hawkes-blue;
+    margin-bottom: 34px;
+}
+
+.hero__visual {
+    height: 100%;
+    min-height: 360px;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px $color-black-60;
+    touch-action: pan-y;
+}
+
+.hero-slider__slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    color: $color-white;
+}
+
+.hero-slider__slide.is-active {
+    opacity: 1;
+    z-index: 1;
+}
+
+.hero-slider__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-slider__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+    display: block;
+}
+
+.hero-slider__content {
+    position: relative;
+    z-index: 2;
+    background: $color-black-50;
+    padding: 16px;
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+    max-width: 80%;
+}
+
+.hero-slider__title {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 6px;
+    text-shadow: 0 1px 2px $color-black-50;
+}
+
+.hero-slider__desc {
+    font-size: 14px;
+    opacity: 0.9;
+    margin: 0;
+    text-shadow: 0 1px 2px $color-black-50;
+}
+
+.hero-slider__button {
+    position: relative;
+    z-index: 2;
+    align-self: flex-start;
+}
+
+.hero-slider__button .btn {
+    background: $color-malachite-95;
+    color: $color-dark-green;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+.hero-slider__button .btn:hover {
+    background: $color-malachite;
+    transform: translateY(-2px);
+}
+
+/* ИНДИКАТОРЫ ПО БЭМ - элемент hero */
+.hero__indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.hero__indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: $color-white-30;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.hero__indicator.is-active {
+    background: $color-malachite;
+}

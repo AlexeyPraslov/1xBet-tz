@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
   ========================================================================== */
@@ -513,4 +514,167 @@ h2 {
 .btn--secondary:hover {
   border-color: #22c55e;
   color: #22c55e;
+}
+
+.hero {
+  padding: 90px 0;
+  background: radial-gradient(60% 60% at 70% 0%, rgba(34, 197, 94, 0.18), transparent), radial-gradient(40% 40% at 20% 20%, rgba(37, 99, 235, 0.18), transparent);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.hero__title {
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+
+.hero__text {
+  max-width: 520px;
+  color: #cbd5f5;
+  margin-bottom: 34px;
+}
+
+.hero__visual {
+  height: 100%;
+  min-height: 360px;
+  position: relative;
+  padding-bottom: 50px;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 26px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 40px 80px rgba(0, 0, 0, 0.6);
+  -ms-touch-action: pan-y;
+      touch-action: pan-y;
+}
+
+.hero-slider__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  color: #ffffff;
+}
+
+.hero-slider__slide.is-active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slider__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+  display: block;
+}
+
+.hero-slider__content {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  max-width: 80%;
+}
+
+.hero-slider__title {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-slider__desc {
+  font-size: 14px;
+  opacity: 0.9;
+  margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-slider__button {
+  position: relative;
+  z-index: 2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+.hero-slider__button .btn {
+  background: rgba(34, 197, 94, 0.95);
+  color: #022c22;
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.hero-slider__button .btn:hover {
+  background: #22c55e;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+/* ИНДИКАТОРЫ ПО БЭМ - элемент hero */
+.hero__indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  z-index: 10;
+}
+
+.hero__indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+}
+
+.hero__indicator.is-active {
+  background: #22c55e;
 }/*# sourceMappingURL=style.css.map */
