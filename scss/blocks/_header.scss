@@ -44,4 +44,14 @@
             }
         }
     }
+
+    @include vp-767 {
+        .header__logo svg {
+            width: 90px;
+        }
+
+        .header__nav {
+            display: none;
+        }
+    }
 }

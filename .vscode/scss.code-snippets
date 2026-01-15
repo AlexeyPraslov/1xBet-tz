@@ -1,0 +1,8 @@
+{
+    "Include viewport mixin": {
+        "scope": "scss",
+        "prefix": "vp",
+        "body": "@include vp-${1|1023,767,480|} {\n    $0\n}",
+        "description": "Insert viewport mixin include"
+    }
+}

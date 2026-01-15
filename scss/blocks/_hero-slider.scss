@@ -1,0 +1,87 @@
+.hero-slider {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 40px 80px $color-black-60;
+    touch-action: pan-y;
+
+    &__slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 20px;
+        color: $color-white;
+
+        &.is-active {
+            opacity: 1;
+            z-index: 1;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+        display: block;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        background: $color-black-50;
+        padding: 16px;
+        border-radius: 12px;
+        backdrop-filter: blur(4px);
+        max-width: 80%;
+    }
+
+    &__title {
+        font-size: 22px;
+        font-weight: 800;
+        margin: 0 0 6px;
+        text-shadow: 0 1px 2px $color-black-50;
+    }
+
+    &__desc {
+        font-size: 14px;
+        opacity: 0.9;
+        margin: 0;
+        text-shadow: 0 1px 2px $color-black-50;
+    }
+
+    &__button {
+        position: relative;
+        z-index: 2;
+        align-self: flex-start;
+
+        .btn {
+            background: $color-malachite-95;
+            color: $color-dark-green;
+            font-size: 14px;
+            padding: 10px 20px;
+
+            &:hover {
+                background: $color-malachite;
+                transform: translateY(-2px);
+            }
+        }
+    }
+}
