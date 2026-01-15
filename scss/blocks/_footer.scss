@@ -43,7 +43,9 @@
     }
 
     &__social-link {
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         width: 32px;
         height: 32px;
         background: $color-midnight;
@@ -53,6 +55,25 @@
         @include vp-767 {
             width: 28px;
             height: 28px;
+        }
+
+        svg {
+            width: 20px;
+            height: 20px;
+            fill: $color-slate;
+
+            @include vp-767 {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        &:hover {
+            background: $color-dodger-blue;
+
+            svg {
+                fill: #fff;
+            }
         }
     }
 
