@@ -1000,4 +1000,20 @@ h2 {
   font-size: 14px;
   color: #94a3b8;
   padding-bottom: 18px;
+}
+
+.cta {
+  padding: 90px 0;
+}
+@media (max-width: 767px) {
+  .cta {
+    padding: 50px 0;
+  }
+}
+.cta__content {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  border-radius: 32px;
+  padding: 80px 30px;
+  text-align: center;
+  color: #022c22;
 }/*# sourceMappingURL=style.css.map */
