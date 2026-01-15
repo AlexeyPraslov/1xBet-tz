@@ -667,6 +667,11 @@ h2 {
   opacity: 1;
   z-index: 1;
 }
+@media (max-width: 767px) {
+  .hero-slider__slide {
+    padding: 10px;
+  }
+}
 .hero-slider__image {
   position: absolute;
   top: 0;
@@ -692,17 +697,32 @@ h2 {
   backdrop-filter: blur(4px);
   max-width: 80%;
 }
+@media (max-width: 767px) {
+  .hero-slider__content {
+    padding: 8px;
+  }
+}
 .hero-slider__title {
   font-size: 22px;
   font-weight: 800;
   margin: 0 0 6px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
+@media (max-width: 767px) {
+  .hero-slider__title {
+    font-size: 16;
+  }
+}
 .hero-slider__desc {
   font-size: 14px;
   opacity: 0.9;
   margin: 0;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767px) {
+  .hero-slider__desc {
+    font-size: 10;
+  }
 }
 .hero-slider__button {
   position: relative;
@@ -1016,4 +1036,90 @@ h2 {
   padding: 80px 30px;
   text-align: center;
   color: #022c22;
+}
+
+.footer {
+  border-top: 1px solid #1e293b;
+  padding: 40px 0 30px;
+  font-size: 13px;
+  color: #64748b;
+}
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 24px;
+}
+@media (max-width: 767px) {
+  .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 20px;
+    margin-bottom: 24px;
+  }
+}
+@media (max-width: 767px) {
+  .footer__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.footer__logo svg {
+  width: 100px;
+}
+@media (max-width: 767px) {
+  .footer__logo svg {
+    width: 80px;
+  }
+}
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+@media (max-width: 767px) {
+  .footer__social {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+.footer__social-link {
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #1e293b;
+  border-radius: 50%;
+  -webkit-transition: background 0.2s;
+  transition: background 0.2s;
+}
+@media (max-width: 767px) {
+  .footer__social-link {
+    width: 28px;
+    height: 28px;
+  }
+}
+.footer__disclaimer {
+  max-width: 600px;
+}
+@media (max-width: 767px) {
+  .footer__disclaimer {
+    text-align: center;
+  }
 }/*# sourceMappingURL=style.css.map */
