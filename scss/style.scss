@@ -1,10 +1,12 @@
 // глобальные стили
-@import "global/variables";
-@import "global/mixins";
-@import "global/normalize";
-@import "global/fonts";
-@import "global/reboot";
-@import "global/container";
-@import "global/visually-hidden";
+@import "global/_variables";
+@import "global/_mixins";
+@import "global/_normalize";
+@import "global/_fonts";
+@import "global/_reboot";
+@import "global/_container";
+@import "global/_visually-hidden";
 
 // блочные стили
+@import "blocks/_header";
+@import "blocks/_btn";

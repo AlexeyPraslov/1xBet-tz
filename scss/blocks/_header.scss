@@ -1,0 +1,29 @@
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(7, 11, 24, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1e293b;
+
+    &__inner {
+        height: 76px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        display: flex;
+        gap: 26px;
+    }
+
+    &__link {
+        font-weight: 600;
+        color: #94a3b8;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+}
