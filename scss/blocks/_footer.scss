@@ -52,11 +52,6 @@
         border-radius: 50%;
         transition: background 0.2s;
 
-        @include vp-767 {
-            width: 28px;
-            height: 28px;
-        }
-
         svg {
             width: 20px;
             height: 20px;
