@@ -10,9 +10,9 @@
 body {
     font-family: "Roboto", sans-serif;
     margin: 0;
-    background: #070b18;
-    color: #e5e7eb;
-    color: $text-light;
+    background: $color-black-russian;
+    color: $color-solitude;
+
     line-height: 1.6;
     overflow-x: hidden;
 }
