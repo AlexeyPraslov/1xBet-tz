@@ -54,7 +54,7 @@
         padding: 16px;
         border-radius: 12px;
         backdrop-filter: blur(4px);
-        max-width: 80%;
+        max-width: 100%;
 
         @include vp-767 {
             padding: 8px;

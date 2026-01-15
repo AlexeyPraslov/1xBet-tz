@@ -700,7 +700,7 @@ h2 {
   padding: 16px;
   border-radius: 12px;
   backdrop-filter: blur(4px);
-  max-width: 80%;
+  max-width: 100%;
 }
 @media (max-width: 767px) {
   .hero-slider__content {
