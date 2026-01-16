@@ -5,6 +5,15 @@
     -webkit-overflow-scrolling: touch;
     position: relative;
 
+    @include vp-1023 {
+        overflow-x: auto; // Скролл на планшетах
+    }
+
+    // На десктопе 1050px+ убираем скролл (включая 1035px)
+    @media (min-width: 1050px) {
+        overflow-x: visible;
+    }
+
     &::-webkit-scrollbar {
         height: 4px;
     }
@@ -26,19 +35,81 @@
 
     &__grid {
         width: 100%;
-        min-width: 400px;
         border-collapse: collapse;
         text-align: left;
+        table-layout: auto; // Автоматическая ширина колонок
     }
 
-    &__header,
-    &__cell {
-        padding: 14px;
+    &__header {
+        padding: 12px 8px;
         border-bottom: 1px solid $color-midnight;
         white-space: nowrap;
+        font-size: 13px;
+        max-width: none;
 
         &:not(:first-child) {
             border-left: 1px solid $color-midnight;
+        }
+    }
+
+    &__cell {
+        padding: 12px 8px;
+        border-bottom: 1px solid $color-midnight;
+        white-space: nowrap;
+        font-size: 13px;
+        max-width: none;
+
+        &:first-child {
+            width: 20%; // Название промо - уже
+        }
+
+        &:nth-child(2) {
+            width: 30%; // Значение бонуса - шире
+        }
+
+        &:nth-child(3) {
+            width: 15%; // Мин депозит - уже
+        }
+
+        &:nth-child(4) {
+            width: 35%; // Wager - шире
+        }
+
+        &:not(:first-child) {
+            border-left: 1px solid $color-midnight;
+        }
+
+        // Убираем нижнее подчеркивание у последней строки
+        tr:last-child & {
+            border-bottom: none;
+        }
+
+        @include vp-1023 {
+            padding: 12px 8px;
+            font-size: 13px;
+        }
+
+        // Специально для экранов ~1035px
+        @media (max-width: 1100px) {
+            padding: 10px 6px;
+            font-size: 12px;
+        }
+
+        @include vp-767 {
+            padding: 10px 8px;
+            font-size: 12px;
+            white-space: normal;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            max-width: 100px;
+
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4) {
+                width: auto;
+                min-width: auto;
+            }
         }
     }
 

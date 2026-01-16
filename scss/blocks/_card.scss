@@ -22,4 +22,39 @@
         font-size: 14px;
         color: $color-rock-blue;
     }
+
+    &__category {
+        font-weight: 800;
+        font-size: 18px;
+        color: $color-white;
+        margin: 0 0 12px 0;
+        border-bottom: 1px solid $color-midnight;
+        padding-bottom: 8px;
+
+        @include vp-767 {
+            font-size: 16px;
+        }
+    }
+
+    &__examples {
+        font-size: 14px;
+        color: $color-rock-blue;
+        margin: 0 0 12px 0;
+        font-style: italic;
+
+        @include vp-767 {
+            font-size: 13px;
+        }
+    }
+
+    &__features {
+        font-size: 14px;
+        color: $color-rock-blue;
+        margin: 0;
+        line-height: 1.4;
+
+        @include vp-767 {
+            font-size: 13px;
+        }
+    }
 }

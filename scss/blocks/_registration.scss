@@ -1,0 +1,89 @@
+.registration {
+    padding: 90px 0;
+
+    @include vp-1023 {
+        padding: 60px 0;
+    }
+
+    @include vp-767 {
+        padding: 40px 0;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        text-align: center;
+        margin: 0 0 24px 0;
+        color: $color-white;
+
+        @include vp-767 {
+            font-size: 28px;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $color-rock-blue;
+        margin: 0 0 32px 0;
+        text-align: center;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include vp-767 {
+            font-size: 14px;
+            line-height: 1.5;
+            margin: 0 0 28px 0;
+        }
+    }
+
+    &__list {
+        margin: 0;
+        padding-left: 32px; // Отступ для цифр
+        counter-reset: registration-counter;
+        list-style: none; // Убираем встроенную нумерацию
+
+        @include vp-767 {
+            padding-left: 28px; // Меньше отступа на мобильных
+        }
+    }
+
+    &__list-item {
+        font-size: 16px;
+        line-height: 1.6;
+        color: $color-rock-blue;
+        margin-bottom: 16px;
+        position: relative;
+        padding-left: 8px;
+
+        @include vp-767 {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 14px;
+            padding-left: 6px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        // Кастомная нумерация
+        &::before {
+            content: counter(registration-counter) ".";
+            counter-increment: registration-counter;
+            position: absolute;
+            left: -32px;
+            top: 0;
+            font-weight: 600;
+            color: $color-white;
+            font-size: 16px;
+
+            @include vp-767 {
+                left: -28px;
+                font-size: 14px;
+            }
+        }
+    }
+}

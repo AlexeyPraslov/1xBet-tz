@@ -4,12 +4,15 @@
  */
 
 import { HeroSlider } from "./hero-slider.js";
-import { FAQ } from "./faq.js";
+import { FactsCarousel, FAQ } from "./faq.js";
 
 // Инициализация приложения после загрузки DOM
 document.addEventListener("DOMContentLoaded", () => {
     // Инициализируем слайдер героя
     const heroSlider = new HeroSlider();
+
+    // Инициализируем карусель фактов
+    const factsCarousel = new FactsCarousel();
 
     // Инициализируем FAQ
     const faq = new FAQ();

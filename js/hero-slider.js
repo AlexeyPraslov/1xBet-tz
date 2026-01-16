@@ -23,15 +23,24 @@ export class HeroSlider {
         let currentIndex = 0;
         const autoplayDelay = parseInt(slider.dataset.autoplay) || 2000;
         let interval;
+        let isTransitioning = false;
 
         // Обновление состояния слайдера
         const updateSlider = (index) => {
+            if (isTransitioning) return; // Предотвращаем одновременные переходы
+            isTransitioning = true;
+
             slides.forEach((slide, i) => {
                 slide.classList.toggle('is-active', i === index);
             });
             indicators.forEach((indicator, i) => {
                 indicator.classList.toggle('is-active', i === index);
             });
+
+            // Снимаем блокировку после завершения transition
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 600); // 600ms - время transition в CSS
         };
 
         // Переход к следующему слайду
@@ -41,9 +50,14 @@ export class HeroSlider {
         };
 
         // Управление автоплеем
-        const pauseSlider = () => clearInterval(interval);
+        const pauseSlider = () => {
+            if (interval) {
+                clearInterval(interval);
+                interval = null;
+            }
+        };
         const resumeSlider = () => {
-            clearInterval(interval);
+            pauseSlider(); // Сначала останавливаем существующий
             interval = setInterval(nextSlide, autoplayDelay);
         };
 
@@ -58,17 +72,27 @@ export class HeroSlider {
         // Обработчики для индикаторов
         indicators.forEach((indicator, i) => {
             indicator.addEventListener('click', () => {
+                if (isTransitioning) return; // Не кликать во время перехода
+
+                pauseSlider(); // Останавливаем автоплей при ручном переключении
                 currentIndex = i;
                 updateSlider(currentIndex);
-                resumeSlider();
+
+                // Возобновляем автоплей через небольшую задержку
+                setTimeout(() => {
+                    resumeSlider();
+                }, 1000);
             });
         });
 
-        // Touch события для свайпа
-        this.setupTouchEvents(slider, currentIndex, updateSlider, resumeSlider, slides);
+        // Touch события для свайпа - передаем ссылки на функции
+        this.setupTouchEvents(slider, () => currentIndex, (newIndex) => {
+            currentIndex = newIndex;
+            updateSlider(currentIndex);
+        }, pauseSlider, resumeSlider, slides, () => isTransitioning);
     }
 
-    setupTouchEvents(slider, currentIndex, updateSlider, resumeSlider, slides) {
+    setupTouchEvents(slider, getCurrentIndex, setCurrentIndex, pauseSlider, resumeSlider, slides, getIsTransitioning) {
         let startX = 0;
         let isDragging = false;
 
@@ -76,7 +100,7 @@ export class HeroSlider {
             isDragging = true;
             startX = e.touches[0].clientX;
             // При начале касания останавливаем автоплей
-            clearInterval(window.heroSliderInterval);
+            pauseSlider();
         }, { passive: true });
 
         slider.addEventListener('touchend', (e) => {
@@ -85,19 +109,28 @@ export class HeroSlider {
             const endX = e.changedTouches[0].clientX;
             const diff = startX - endX;
 
-            if (Math.abs(diff) > 50) {
+            if (Math.abs(diff) > 50 && !getIsTransitioning()) {
+                const currentIndex = getCurrentIndex();
+                let newIndex;
+
                 if (diff > 0) {
                     // Свайп влево - следующий слайд
-                    currentIndex = (currentIndex + 1) % slides.length;
+                    newIndex = (currentIndex + 1) % slides.length;
                 } else {
                     // Свайп вправо - предыдущий слайд
-                    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+                    newIndex = (currentIndex - 1 + slides.length) % slides.length;
                 }
-                updateSlider(currentIndex);
+
+                pauseSlider(); // Останавливаем автоплей при свайпе
+                setCurrentIndex(newIndex);
+
+                // Возобновляем автоплей через задержку
+                setTimeout(() => {
+                    resumeSlider();
+                }, 1500);
             }
 
             isDragging = false;
-            resumeSlider();
         });
     }
 }

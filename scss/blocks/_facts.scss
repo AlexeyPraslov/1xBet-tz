@@ -66,14 +66,21 @@
         }
     }
 
+    &__carousel-container {
+        overflow: hidden;
+        width: 100%;
+    }
+
     &__carousel-track {
         display: flex;
         gap: 24px;
-        animation: scrollFacts 30s linear infinite;
+        will-change: transform;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
     }
 
     &__carousel-item {
-        flex: 0 0 180px;
+        flex: 0 0 240px;
         background: linear-gradient(
             135deg,
             $color-black-russian,
@@ -95,6 +102,6 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-180px * 6 - 24px * 6));
+        transform: translateX(-50%);
     }
 }
