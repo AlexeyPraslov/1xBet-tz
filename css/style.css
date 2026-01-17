@@ -687,6 +687,7 @@ h2 {
 @media (max-width: 767px) {
   .hero-slider__content {
     padding: 8px;
+    backdrop-filter: blur(2px);
   }
 }
 .hero-slider__title {
