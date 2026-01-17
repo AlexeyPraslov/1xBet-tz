@@ -684,10 +684,14 @@ h2 {
   backdrop-filter: blur(4px);
   max-width: 100%;
 }
+@media (max-width: 1023px) {
+  .hero-slider__content {
+    backdrop-filter: blur(2px);
+  }
+}
 @media (max-width: 767px) {
   .hero-slider__content {
     padding: 8px;
-    backdrop-filter: blur(2px);
   }
 }
 .hero-slider__title {
