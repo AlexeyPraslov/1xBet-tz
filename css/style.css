@@ -452,12 +452,9 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 767px) {
-  .header .header__logo svg {
-    width: 90px;
-  }
-  .header .header__nav {
-    display: none;
+@media (max-width: 480px) {
+  .header__logo-img {
+    width: 120px;
   }
 }
 
