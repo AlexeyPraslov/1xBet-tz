@@ -38,9 +38,10 @@
 
     &__examples {
         font-size: 14px;
-        color: $color-rock-blue;
+        color: $color-malachite;
         margin: 0 0 12px 0;
         font-style: italic;
+        font-weight: 500;
 
         @include vp-767 {
             font-size: 13px;

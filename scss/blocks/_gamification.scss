@@ -1,4 +1,4 @@
-.games {
+.gamification {
     padding: 90px 0;
 
     @include vp-1023 {
@@ -22,24 +22,11 @@
         }
     }
 
-    &__subtitle {
-        font-size: 24px;
-        font-weight: 700;
-        margin: 32px 0 16px 0;
-        color: $color-white;
-        text-align: center;
-
-        @include vp-767 {
-            font-size: 20px;
-            margin: 28px 0 14px 0;
-        }
-    }
-
     &__text {
         font-size: 16px;
         line-height: 1.6;
         color: $color-rock-blue;
-        margin: 0 0 20px 0;
+        margin: 0;
         text-align: center;
         max-width: 900px;
         margin-left: auto;
@@ -48,42 +35,6 @@
         @include vp-767 {
             font-size: 14px;
             line-height: 1.5;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-    }
-
-    &__list {
-        margin: 20px 0;
-        padding-left: 20px;
-
-        @include vp-767 {
-            padding-left: 16px;
-        }
-    }
-
-    &__list-item {
-        font-size: 16px;
-        line-height: 1.6;
-        color: $color-rock-blue;
-        margin-bottom: 16px;
-        position: relative;
-
-        @include vp-767 {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 14px;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        .text-highlight {
-            color: $color-white;
-            font-weight: 600;
         }
     }
 

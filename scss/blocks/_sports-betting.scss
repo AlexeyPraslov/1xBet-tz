@@ -1,4 +1,4 @@
-.games {
+.sports-betting {
     padding: 90px 0;
 
     @include vp-1023 {
@@ -40,10 +40,6 @@
         line-height: 1.6;
         color: $color-rock-blue;
         margin: 0 0 20px 0;
-        text-align: center;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
 
         @include vp-767 {
             font-size: 14px;
@@ -52,49 +48,18 @@
 
         &:last-child {
             margin-bottom: 0;
-        }
-    }
-
-    &__list {
-        margin: 20px 0;
-        padding-left: 20px;
-
-        @include vp-767 {
-            padding-left: 16px;
-        }
-    }
-
-    &__list-item {
-        font-size: 16px;
-        line-height: 1.6;
-        color: $color-rock-blue;
-        margin-bottom: 16px;
-        position: relative;
-
-        @include vp-767 {
-            font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 14px;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        .text-highlight {
-            color: $color-white;
-            font-weight: 600;
         }
     }
 
     &__cards {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 24px;
         margin: 40px 0 0 0;
 
         @include vp-1023 {
             grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
         }
 
         @include vp-767 {

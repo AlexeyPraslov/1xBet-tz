@@ -1,0 +1,108 @@
+.reviews {
+    padding: 90px 0;
+
+    @include vp-1023 {
+        padding: 60px 0;
+    }
+
+    @include vp-767 {
+        padding: 40px 0;
+    }
+
+    &__title {
+        font-size: 36px;
+        font-weight: 800;
+        text-align: center;
+        margin: 0 0 24px 0;
+        color: $color-white;
+
+        @include vp-767 {
+            font-size: 28px;
+            margin: 0 0 20px 0;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+        gap: 24px;
+
+        @include vp-767 {
+            gap: 12px;
+        }
+    }
+
+    &__card {
+        background: linear-gradient(135deg, #070b18, #0a1a2f);
+        border: 1px solid #1e293b;
+        border-radius: 22px;
+        padding: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: translateY(-6px);
+        }
+
+        @include vp-767 {
+            padding: 14px;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        padding-bottom: 12px;
+        border-bottom: 1px solid $color-midnight;
+    }
+
+    &__avatar {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid $color-midnight;
+        flex-shrink: 0;
+    }
+
+    &__meta {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__name {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 800;
+    }
+
+    &__rating {
+        font-size: 14px;
+        color: $color-malachite;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $color-rock-blue;
+
+        @include vp-767 {
+            font-size: 13px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+

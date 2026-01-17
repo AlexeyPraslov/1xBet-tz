@@ -1,4 +1,4 @@
-.games {
+.mobile-casino {
     padding: 90px 0;
 
     @include vp-1023 {
@@ -22,19 +22,6 @@
         }
     }
 
-    &__subtitle {
-        font-size: 24px;
-        font-weight: 700;
-        margin: 32px 0 16px 0;
-        color: $color-white;
-        text-align: center;
-
-        @include vp-767 {
-            font-size: 20px;
-            margin: 28px 0 14px 0;
-        }
-    }
-
     &__text {
         font-size: 16px;
         line-height: 1.6;
@@ -49,18 +36,16 @@
             font-size: 14px;
             line-height: 1.5;
         }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
     }
 
     &__list {
-        margin: 20px 0;
-        padding-left: 20px;
+        margin: 0;
+        padding-left: 32px; 
+        counter-reset: registration-counter;
+        list-style: none; 
 
         @include vp-767 {
-            padding-left: 16px;
+            padding-left: 28px; 
         }
     }
 
@@ -70,37 +55,35 @@
         color: $color-rock-blue;
         margin-bottom: 16px;
         position: relative;
+        padding-left: 8px;
 
         @include vp-767 {
             font-size: 14px;
             line-height: 1.5;
             margin-bottom: 14px;
+            padding-left: 6px;
         }
 
         &:last-child {
             margin-bottom: 0;
         }
 
-        .text-highlight {
-            color: $color-white;
+        // Кастомная нумерация
+        &::before {
+            content: counter(registration-counter) ".";
+            counter-increment: registration-counter;
+            position: absolute;
+            left: -32px;
+            top: 0;
             font-weight: 600;
+            color: $color-white;
+            font-size: 16px;
+
+            @include vp-767 {
+                left: -28px;
+                font-size: 14px;
+            }
         }
     }
 
-    &__cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 24px;
-        margin: 40px 0 0 0;
-
-        @include vp-1023 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        @include vp-767 {
-            grid-template-columns: 1fr;
-            gap: 16px;
-            margin: 30px 0 0 0;
-        }
-    }
 }
