@@ -27,10 +27,8 @@
         line-height: 1.6;
         color: $color-rock-blue;
         margin: 0 0 20px 0;
-        text-align: center;
-        max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
+        text-align: justify;
+      
 
         @include vp-767 {
             font-size: 14px;

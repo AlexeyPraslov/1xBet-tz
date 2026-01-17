@@ -488,6 +488,15 @@ h2 {
 .btn--primary:hover {
   -webkit-transform: translateY(-3px) scale(1.03);
           transform: translateY(-3px) scale(1.03);
+  color: #FC6154;
+}
+@media (max-width: 540px) {
+  .btn--primary {
+    padding: 10px 20px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+  }
 }
 .btn--secondary {
   background: #070b18;
@@ -495,13 +504,7 @@ h2 {
 }
 .btn--secondary:hover {
   border-color: #22c55e;
-  color: #22c55e;
-}
-@media (max-width: 767px) {
-  .btn .btn--primary {
-    padding: 10px 20px;
-    font-size: 14px;
-  }
+  color: #FC6154;
 }
 
 .hero {
@@ -540,6 +543,9 @@ h2 {
   .hero__title {
     font-size: 26px;
   }
+}
+.hero__title span {
+  color: #FC6154;
 }
 .hero__text {
   max-width: 520px;
@@ -868,14 +874,15 @@ h2 {
     font-size: 28px;
   }
 }
+.table-section__title span {
+  color: #FC6154;
+}
 .table-section__description {
   font-size: 16px;
   line-height: 1.5;
-  text-align: center;
+  text-align: justify;
   color: #94a3b8;
   margin: 0 0 40px 0;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (max-width: 767px) {
   .table-section__description {
@@ -886,7 +893,7 @@ h2 {
 .table-section__subtitle {
   font-size: 24px;
   font-weight: 700;
-  margin: 32px 0 16px 0;
+  margin: 0 0 16px 0;
   color: #ffffff;
 }
 @media (max-width: 767px) {
@@ -899,7 +906,8 @@ h2 {
   font-size: 16px;
   line-height: 1.6;
   color: #94a3b8;
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .table-section__text {
@@ -1047,15 +1055,15 @@ tr:last-child .table__cell {
     margin: 0 0 20px 0;
   }
 }
+.registration__title span {
+  color: #FC6154;
+}
 .registration__text {
   font-size: 16px;
   line-height: 1.6;
   color: #94a3b8;
   margin: 0 0 32px 0;
-  text-align: center;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .registration__text {
@@ -1137,10 +1145,13 @@ tr:last-child .table__cell {
     margin: 0 0 20px 0;
   }
 }
+.games__title span {
+  color: #FC6154;
+}
 .games__subtitle {
   font-size: 24px;
   font-weight: 700;
-  margin: 32px 0 16px 0;
+  margin: 0 0 16px 0;
   color: #ffffff;
   text-align: center;
 }
@@ -1154,11 +1165,8 @@ tr:last-child .table__cell {
   font-size: 16px;
   line-height: 1.6;
   color: #94a3b8;
-  margin: 0 0 20px 0;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 0 30px 0;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .games__text {
@@ -1170,7 +1178,7 @@ tr:last-child .table__cell {
   margin-bottom: 0;
 }
 .games__list {
-  margin: 20px 0;
+  margin: 0 0 20px 0;
   padding-left: 20px;
 }
 @media (max-width: 767px) {
@@ -1182,7 +1190,7 @@ tr:last-child .table__cell {
   font-size: 16px;
   line-height: 1.6;
   color: #94a3b8;
-  margin-bottom: 16px;
+  margin: 0 0 16px 0;
   position: relative;
 }
 @media (max-width: 767px) {
@@ -1203,7 +1211,7 @@ tr:last-child .table__cell {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
-  margin: 40px 0 0 0;
+  margin: 0 0 30px 0;
 }
 @media (max-width: 1023px) {
   .games__cards {
@@ -1243,6 +1251,9 @@ tr:last-child .table__cell {
     font-size: 28px;
     margin: 0 0 20px 0;
   }
+}
+.sports-betting__title span {
+  color: #FC6154;
 }
 .sports-betting__subtitle {
   font-size: 24px;
@@ -1318,15 +1329,16 @@ tr:last-child .table__cell {
     margin: 0 0 20px 0;
   }
 }
+.gamification__title span {
+  color: #FC6154;
+}
 .gamification__text {
   font-size: 16px;
   line-height: 1.6;
   color: #94a3b8;
-  margin: 0;
+  margin: 0 auto;
   text-align: center;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (max-width: 767px) {
   .gamification__text {
@@ -1441,10 +1453,7 @@ tr:last-child .table__cell {
   line-height: 1.6;
   color: #94a3b8;
   margin: 0 0 20px 0;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .about__text {
@@ -1671,11 +1680,9 @@ tr:last-child .table__cell {
   font-size: 16px;
   line-height: 1.6;
   color: #94a3b8;
-  margin: 0 0 20px 0;
+  margin: 0 auto 20px;
   text-align: center;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (max-width: 767px) {
   .payment__text {
@@ -1687,6 +1694,7 @@ tr:last-child .table__cell {
   font-style: italic;
   margin: 0 0 20px 0;
   font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .reviews {
@@ -1714,6 +1722,9 @@ tr:last-child .table__cell {
     font-size: 28px;
     margin: 0 0 20px 0;
   }
+}
+.reviews__title span {
+  color: #FC6154;
 }
 .reviews__list {
   display: grid;
@@ -1752,7 +1763,7 @@ tr:last-child .table__cell {
     padding: 14px;
   }
 }
-.reviews__header {
+.reviews__heading {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1837,11 +1848,9 @@ tr:last-child .table__cell {
   font-size: 16px;
   line-height: 1.6;
   color: #94a3b8;
-  margin: 0 0 20px 0;
+  margin: 0 auto 20px;
   text-align: center;
   max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
 }
 @media (max-width: 767px) {
   .safely__text {
@@ -1900,10 +1909,7 @@ tr:last-child .table__cell {
   line-height: 1.6;
   color: #94a3b8;
   margin: 0 0 20px 0;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .mobile-casino__text {
@@ -1989,10 +1995,7 @@ tr:last-child .table__cell {
   line-height: 1.6;
   color: #94a3b8;
   margin: 0 0 20px 0;
-  text-align: center;
-  max-width: 900px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: justify;
 }
 @media (max-width: 767px) {
   .responsible-gaming__text {

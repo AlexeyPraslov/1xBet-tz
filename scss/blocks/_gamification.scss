@@ -22,15 +22,18 @@
         }
     }
 
+    &__title span {
+        color: $color-tomato;
+    }
+
     &__text {
         font-size: 16px;
         line-height: 1.6;
         color: $color-rock-blue;
-        margin: 0;
+        margin: 0 auto;
         text-align: center;
         max-width: 900px;
-        margin-left: auto;
-        margin-right: auto;
+        
 
         @include vp-767 {
             font-size: 14px;

@@ -34,6 +34,11 @@
         @include vp-767 {
             font-size: 26px;
         }
+
+    }
+
+    &__title span {
+        color: $color-tomato;
     }
 
     &__text {

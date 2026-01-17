@@ -16,7 +16,15 @@
 
         &:hover {
             transform: translateY(-3px) scale(1.03);
+            color: $color-tomato;
         }
+
+        @media (max-width: 540px) {
+            padding: 10px 20px;
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+          }
     }
 
     &--secondary {
@@ -24,14 +32,9 @@
         border: 1px solid $color-midnight;
         &:hover {
             border-color: $color-malachite;
-            color: $color-malachite;
+            color: $color-tomato;
         }
     }
 
-    @include vp-767 {
-        .btn--primary {
-            padding: 10px 20px;
-            font-size: 14px;
-        }
-    }
+    
 }

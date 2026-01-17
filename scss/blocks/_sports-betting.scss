@@ -22,6 +22,10 @@
         }
     }
 
+    &__title span {
+        color: $color-tomato;
+    }
+
     &__subtitle {
         font-size: 24px;
         font-weight: 700;
