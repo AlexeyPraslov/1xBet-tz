@@ -13,37 +13,6 @@
         justify-content: space-between;
     }
 
-    &__nav {
-        display: flex;
-        gap: 26px;
-    }
-
-    &__link {
-        position: relative;
-        font-weight: 600;
-        color: $color-rock-blue;
-        transition: color 0.3s ease;
-
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: $color-dodger-blue;
-            clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
-            transition: clip-path 0.4s ease;
-        }
-
-        &:hover {
-            color: $color-white;
-
-            &::after {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-            }
-        }
-    }
 
     @include vp-767 {
         .header__logo svg {

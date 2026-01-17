@@ -452,37 +452,6 @@ h2 {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-.header__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 26px;
-}
-.header__link {
-  position: relative;
-  font-weight: 600;
-  color: #94a3b8;
-  -webkit-transition: color 0.3s ease;
-  transition: color 0.3s ease;
-}
-.header__link::after {
-  content: "";
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #14a0ff;
-  clip-path: polygon(50% 0, 50% 0, 50% 100%, 50% 100%);
-  -webkit-transition: clip-path 0.4s ease;
-  transition: clip-path 0.4s ease;
-}
-.header__link:hover {
-  color: #ffffff;
-}
-.header__link:hover::after {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
 @media (max-width: 767px) {
   .header .header__logo svg {
     width: 90px;
@@ -1644,60 +1613,32 @@ tr:last-child .table__cell {
     width: 80px;
   }
 }
-.footer__social {
+.footer__pay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 16px;
 }
 @media (max-width: 767px) {
-  .footer__social {
+  .footer__pay {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
-.footer__social-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: #1e293b;
-  border-radius: 50%;
-  -webkit-transition: background 0.2s;
-  transition: background 0.2s;
-}
-.footer__social-link svg {
-  width: 32px;
-  height: 32px;
-  fill: #64748b;
-}
-@media (max-width: 767px) {
-  .footer__social-link svg {
-    width: 22px;
-    height: 22px;
-  }
-}
-.footer__social-link:hover {
-  background: #14a0ff;
-}
-.footer__social-link:hover svg {
-  fill: #ffffff;
-}
 .footer__disclaimer {
+  margin: 0 auto;
   max-width: 600px;
+  text-align: center;
 }
 @media (max-width: 767px) {
   .footer__disclaimer {
     text-align: center;
   }
+}
+.footer__disclaimer-text {
+  margin: 0 0 10px 0;
+  font-size: 12px;
 }
 
 .payment {
