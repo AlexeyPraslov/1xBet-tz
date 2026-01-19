@@ -62,19 +62,13 @@
     &__content {
         position: relative;
         z-index: 2;
-        background: $color-black-10;
-        padding: 16px;
-        border-radius: 12px;
-        backdrop-filter: blur(4px);
-        max-width: 100%;
 
-        @include vp-1023 {
-            backdrop-filter: blur(2px);
-        }
+        padding: 16px;
+
+        max-width: 100%;
 
         @include vp-767 {
             padding: 8px;
-            
         }
     }
 
@@ -82,7 +76,12 @@
         font-size: 22px;
         font-weight: 800;
         margin: 0 0 6px;
-        text-shadow: 0 1px 2px $color-black-50;
+
+        text-shadow:
+            -1px -1px 0 $color-black,
+            1px -1px 0 $color-black,
+            -1px 1px 0 $color-black,
+            1px 1px 0 $color-black;
 
         @include vp-767 {
             font-size: 16;
@@ -93,7 +92,11 @@
         font-size: 14px;
         opacity: 0.9;
         margin: 0;
-        text-shadow: 0 1px 2px $color-black-50;
+        text-shadow:
+            -1px -1px 0 $color-black,
+            1px -1px 0 $color-black,
+            -1px 1px 0 $color-black,
+            1px 1px 0 $color-black;
 
         @include vp-767 {
             font-size: 10;
@@ -106,15 +109,7 @@
         align-self: flex-start;
 
         .btn {
-            background: $color-malachite-95;
-            color: $color-dark-green;
-            font-size: 14px;
-            padding: 10px 20px;
-
-            &:hover {
-                background: $color-malachite;
-                transform: translateY(-2px);
-            }
+            min-width: 320px;
         }
     }
 }

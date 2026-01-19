@@ -3,16 +3,35 @@
     align-items: center;
     justify-content: center;
     padding: 16px 34px;
-    border-radius: 999px;
+
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    transition: 0.25s;
+    transition: transform 0.25s ease;
+
+    position: relative;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    box-shadow: none !important;
 
     &--primary {
-        background: linear-gradient(135deg, $color-malachite, $color-emerald);
-        color: $color-dark-green;
-        box-shadow: 0 20px 40px $color-malachite-45;
+        background: url("../images/btn.webp") no-repeat center;
+        background-size: 100% 100%;
+        overflow: hidden;
+        background-color: transparent;
+        color: $color-white;
+        text-shadow:
+            -1px -1px 0 $color-black,
+            1px -1px 0 $color-black,
+            -1px 1px 0 $color-black,
+            1px 1px 0 $color-black;
+        border: none;
+        padding: 25px;
+        filter: drop-shadow(0 20px 40px $color-malachite-45);
+        min-width: 220px;
+        height: 60px;
+        border-radius: 0;
 
         &:hover {
             transform: translateY(-3px) scale(1.03);
@@ -20,21 +39,48 @@
         }
 
         @media (max-width: 540px) {
-            padding: 10px 20px;
+            min-width: 160px;
+            height: 48px;
             font-size: 12px;
-            line-height: 12px;
-            text-align: center;
-          }
-    }
-
-    &--secondary {
-        background: $color-black-russian;
-        border: 1px solid $color-midnight;
-        &:hover {
-            border-color: $color-malachite;
-            color: $color-tomato;
         }
     }
 
-    
+    &--secondary {
+        background: url("../images/secondary-cta.webp") no-repeat center;
+        background-size: 100% 100%;
+        overflow: hidden;
+        background-color: transparent;
+        color: $color-white;
+        text-shadow:
+            -1px -1px 0 $color-black,
+            1px -1px 0 $color-black,
+            -1px 1px 0 $color-black,
+            1px 1px 0 $color-black;
+        border: none;
+
+        filter: drop-shadow(0 20px 40px $color-malachite-45);
+        min-width: 220px;
+        height: 60px;
+        padding: 25px;
+        border-radius: 0;
+
+        &:hover {
+            background: url("../images/secondary-cta--hover.webp") no-repeat
+                center;
+            background-size: 100% 100%;
+            border: none;
+            filter: drop-shadow(0 20px 40px $color-malachite-45);
+            min-width: 220px;
+            height: 60px;
+            padding: 0;
+            transform: translateY(-3px) scale(1.03);
+            color: $color-tomato;
+        }
+
+        @media (max-width: 540px) {
+            min-width: 160px;
+            height: 48px;
+            font-size: 12px;
+        }
+    }
 }
